@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,nofollow" />
+  <meta property="twitter:image" content="null" />
+  <meta property="twitter:card" content="summary" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Carrinho - UrbanSole - Moda Streetwear" />
+  <meta property="og:site_name" content="UrbanSole - Moda Streetwear" />
+  <meta property="og:description"
+    content="Bem vindo(a) à UrbanSole sua escolha principal para Tênis StreetWear" />
+  <meta property="og:image" content="null" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="627" />
+  <meta name="description"
+    content="Bem vindo(a) à UrbanSole sua escolha principal para Tênis StreetWear" />
+  <meta name="keywords" content="Tênis, StreetWear, Sapatos, Nike, Adidas, Puma, Skate" />
+  <link rel="icon" type="image/x-icon" href="public/36x36.png" />
+  <title>Carrinho - UrbanSole - Moda Streetwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.centralcart.com.br/public/assets/css/centraldraft.css" />
+  <link rel="stylesheet" href="https://cdn.centralcart.com.br/public/assets/fontawesome/all.css" />
+  <link rel="stylesheet" href="assets/core.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'brand': '#7164ff',
+            'brand-contrast': '#8d88ff',
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-menu-mobile">
+      <ion-icon name="menu-outline"></ion-icon>
+    </div>
+    <a class="header-logo-mobile" href="/">
+      <img src="M1xZR05.png" alt="logo">
+    </a>
+    <div class="header-left">
+      <a class="header-logo" href="/">
+        <img src="M1xZR05.png" alt="logo">
+      </a>
+      <div class="carts">
+
+        <a class="carts-link  false" href="index.html">
+          Home
+        </a>
+        <a class="carts-link false" data-type="category" href="category/tendencias.html">
+          TENDENCIAS </a>
+        <a class="carts-link false" data-type="category" href="category/feminino.html">
+          FEMININO </a>
+        <a class="carts-link false" data-type="category" href="category/masculino.html">
+          MASCULINO </a>
+        <a class="carts-link false" data-type="category" href="category/novidades.html">
+          NOVIDADES </a>
+
+      </div>
+    </div>
+    <div class="header-right">
+
+      <a href="../cart.html">
+        <div class="cart-icon active">
+          <ion-icon name="cart-outline"></ion-icon>
+          <div class="cart-quantity">1</div>
+        </div>
+      </a>
+
+    </div>
+    <div class="menu-mobile-carts">
+      <div class="close-mobile"><ion-icon name="close-outline"></ion-icon></div>
+
+      <a class="carts-link-mobile false" href="index.html">Home</a>
+      <a class="carts-link-mobile false" data-type="category" href="category/tendencias.html">
+        TENDENCIAS </a>
+      <a class="carts-link-mobile false" data-type="category" href="category/feminino.html">
+        FEMININO </a>
+      <a class="carts-link-mobile false" data-type="category" href="category/masculino.html">
+        MASCULINO </a>
+      <a class="carts-link-mobile false" data-type="category" href="category/novidades.html">
+        NOVIDADES </a>
+
+    </div>
+  </header>
+  <div class="min-h-[calc(100vh-281px-252px-32px)]">
+
+    <section class="section section-checkout">
+      <div class="checkout-container">
+        <div class="checkout-form">
+
+          <div class="form">
+            <div class="form-title">
+              <h4>DETALHES DA COMPRA</h4>
+            </div>
+            <div class="form-input">
+              <form id="checkout-form">
+                <input class="input-name" type="text" id="name" name="name" required placeholder="Nome*">
+                <input class="input-email" type="email" id="email" name="email" required placeholder="Email*">
+                <input class="input-cpf hidden" type="text" id="cpf" name="cpf" placeholder="CPF*">
+                <div class="double-input">
+                  <input class="input-phone flex" id="tel" name="tel" type="text" required placeholder="Telefone*">
+                </div>
+                <div class="block-discord">
+                  <input id="discord" name="discord" type="hidden">
+                  <button class="button-discord discord-button" type="button">
+                    <i class="fa-brands fa-instagram me-1"></i>
+                    Preencha os dados com o Instagram
+                  </button>
+                </div>
+                <div class="terms">
+                  <label class="container"> Eu aceito os
+                    <b onclick="(function (e) {e.preventDefault(); showTerms()})(event)">
+                      termos e condições
+                    </b>
+                    desta compra.
+                    <input type="checkbox" id="terms" name="terms">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="itens-action">
+                  <button id="checkout-button" type="submit">
+                    <ion-icon name="bag-check-outline"></ion-icon>
+                    Finalizar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+        <div class="checkout-itens">
+          <div class="itens-title">
+            <h4>SEUS ITENS</h4>
+            <img src="aS63xMg.png" draggable="false" onclick="return false;" alt="line">
+          </div>
+          <div class="itens-list">
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="th th-prod">Produto</th>
+                  <th class="th th-value">Valor</th>
+                  <th class="th th-quant">Quant.</th>
+                  <th class="th th-act"></th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td class="td td-prod">
+                    <div>
+                      <ion-icon name="checkmark-circle-outline"></ion-icon>
+                      <h4>
+                        Tênis Nike Air Force 1 High SE Feminino </h4>
+                    </div>
+                  </td>
+                  <td class="td td-value">
+                    <h4>
+                      R$ 999.99 </h4>
+                  </td>
+                  <td class="td td-quant">
+                    <div>
+                      <button data-cart-action="decrease" data-package-id="65187" class>
+                        <ion-icon name="remove-outline"></ion-icon>
+                      </button>
+                      <input type="number" data-cart-action="input" data-package-id="65187" placeholder="0" value="1"
+                        autocomplete="off">
+                      <button data-cart-action="increase" data-package-id="65187" class>
+                        <ion-icon name="add-outline"></ion-icon>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="td td-act">
+                    <button data-cart-action="remove" data-package-id="65187">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+            <div class="itens-value">
+              <div class="itens-value-price">
+                <h4 class="total-cart-price">total: <span>
+                    R$ 999.99 </span></h4>
+              </div>
+            </div>
+
+          </div>
+          <hr>
+          <div class="itens-cupom">
+            <div class="cupom-title">
+              <h4>CUPOM DESCONTO</h4>
+            </div>
+
+            <form class onsubmit="(function (event) {event.preventDefault()})(event)">
+              <div class="cupom-inputs">
+                <input type="text" placeholder="Digite o código" value autocomplete="off">
+                <button data-coupon-action="apply" class type="submit">
+                  <ion-icon name="ticket-outline"></ion-icon>
+                  Aplicar </button>
+              </div>
+
+            </form>
+          </div>
+          <hr>
+          <div class="itens-forma-pag">
+            <div class="forma-pag-title">
+              <h4>FORMA DE PAGAMENTO</h4>
+              <img src="6CxNHns.png" draggable="false" onclick="return false;" alt="circle">
+            </div>
+            <div class="forma-pag-value">
+
+              <div class="forma-pag-radio">
+                <input type="radio" id="MERCADOPAGO" name="payment_gateway" value="MERCADOPAGO">
+                <label for="MERCADOPAGO">
+                  <img src="https://cdn.centralcart.com.br/public/gateway-icons/icon-mercadopago.svg" class>
+                  Mercado Pago </label>
+                <div class="check"></div>
+              </div>
+
+
+              <div class="forma-pag-radio">
+                <input type="radio" id="PAYPAL" name="payment_gateway" value="PAYPAL">
+                <label for="PAYPAL">
+                  <img src="https://cdn.centralcart.com.br/public/gateway-icons/icon-paypal.svg" class>
+                  PayPal </label>
+                <div class="check"></div>
+              </div>
+
+
+              <div class="forma-pag-radio">
+                <input type="radio" id="PICPAY" name="payment_gateway" value="PICPAY">
+                <label for="PICPAY">
+                  <img src="https://cdn.centralcart.com.br/public/gateway-icons/icon-picpay.svg" class>
+                  PicPay </label>
+                <div class="check"></div>
+              </div>
+
+
+              <div class="forma-pag-radio">
+                <input type="radio" id="PIX" name="payment_gateway" value="PIX">
+                <label for="PIX">
+                  <img src="https://cdn.centralcart.com.br/public/gateway-icons/icon-pix.svg" class>
+                  PIX </label>
+                <div class="check"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="pix-modal">
+      <div class="p-4 flex justify-between">
+        <h1 class="font-bold text-lg flex items-center gap-2" style="color:#f8f8f8;">Concluir pagamento</h1>
+        <button class="yellowUS rounded-lg w-8 h-8" onclick="closeModal()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="p-4 flex flex-col items-center">
+        <h1 class="yellowUS font-bold text-xl">Escaneie o código QR abaixo:</h1>
+        <img id="qr-content" width="300" height="300" src="data:image/jpeg;base64,placeholder">
+        <h3 class="whiteUS font-semibold">ou use o código copia e cola</h3>
+        <div class="p-4 flex gap-2 items-center mt-2">
+          <input id="qr-copy-code" readonly value class="border rounded px-2 py-1 w-full h-10 select-all input-copy" />
+          <button id="copy-pix" class="px-4 py-2 rounded-md font-semibold whitespace-nowrap button-copy">
+            <ion-icon name="copy-outline"></ion-icon>
+            Copiar
+          </button>
+        </div>
+      </div>
+      <div class="p-4 flex">
+        <a id="return-to" href class="ms-auto flex items-center max-w-fit px-4 py-2 rounded-md flex-1 font-semibold"
+          style="background-color:#5c0130; color: #420123;">
+          <ion-icon class="text-lg mr-2" name="checkmark-done-outline"></ion-icon>
+          Pronto!
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="terms-modal" class="hidden">
+    <div class="bg-US rounded">
+      <div class="flex items-center justify-between border-b borderUS p-4">
+        <h1 class="font-bold text-lg whiteUS">Leia os termos</h1>
+        <button class="rounded-lg w-8 h-8" style="outline: none;" onclick="closeModal()">
+          <i class="yellowUS fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="p-4">
+        <div class="CentralDraft whiteUS">
+          <h1>TERMOS E CONDIÇÕES DE COMPRA DA URBANSOLE</h1>
+
+          <h2>ATENÇÃO: ANTES DE EFETUAR SUA COMPRA NO SITE, LEIA CUIDADOSAMENTE ESTES TERMOS E CONDIÇÕES:</h2>
+      
+          <p>1. Aceitação dos Termos de Uso</p>
+          <p>Ao realizar uma compra em nosso site, você, doravante denominado "USUÁRIO", declara que é maior de idade, emancipado ou está sendo representado por pessoa capaz, garantindo que ambos possuem plena capacidade civil e penal. O uso deste site e a efetivação de uma compra implicam na aceitação integral destes Termos e Condições de Compra. Portanto, é essencial que você leia, compreenda e aceite todas as condições estabelecidas neste documento.</p>
+      
+          <p>2. Descrição dos Serviços</p>
+          <p>2.1. Os serviços oferecidos pela URBANSOLE consistem em disponibilizar aos clientes cadastrados opções de compra de produtos de moda street wear.</p>
+          <p>2.2. É responsabilidade do cliente fornecer informações pessoais corretas durante o processo de compra.</p>
+          <p>2.3. Ao navegar em nossa Loja Virtual e efetuar a compra de produtos, o cliente concorda com os termos e condições aqui estipulados e efetua o pagamento correspondente.</p>
+          <p>2.4. A entrega dos produtos é realizada de acordo com os procedimentos padrão, com exceção de produtos especiais que serão entregues pela equipe de suporte ao cliente.</p>
+          <p>2.5. Todos os produtos adquiridos são válidos até a data de vencimento especificada ou, se forem permanentes, até a data de reset do servidor.</p>
+          <p>2.6. O desempenho de produtos, como calçados, pode ser ajustado periodicamente para melhor atender às necessidades dos clientes e à evolução das tendências street wear.</p>
+      
+          <p>3. Modificações nos Termos de Uso</p>
+          <p>3.1. A URBANSOLE reserva-se o direito de alterar, a qualquer momento, estes Termos de Uso visando melhorias nos serviços prestados. As modificações entrarão em vigor após sua publicação no site. Caso você não concorde com as alterações, deverá entrar em contato conosco em até 24 horas a partir da publicação das modificações.</p>
+          <p>3.2. As alterações não afetarão compromissos e aquisições já iniciados até a data da publicação das modificações, mantendo-se vigentes os Termos de Uso anteriores.</p>
+      
+          <p>4. Privacidade das Informações</p>
+          <p>4.1. A URBANSOLE se compromete a manter a confidencialidade e segurança das informações dos clientes, porém não se responsabiliza por violações causadas por terceiros que utilizem redes públicas ou a internet para acessar informações dos Usuários.</p>
+          <p>4.2. A URBANSOLE poderá compartilhar informações dos Usuários com empresas parceiras para garantir a prestação adequada de serviços.</p>
+          <p>4.3. Em caso de dúvidas sobre a proteção de dados pessoais, entre em contato com nossa equipe de suporte.</p>
+      
+          <p>5. Obrigações dos Clientes</p>
+          <p>5.1. Os clientes interessados em adquirir produtos oferecidos pela URBANSOLE devem realizar o cadastro, escolher os produtos desejados e efetuar o pagamento correspondente.</p>
+      
+          <p>6. Violação do Sistema ou Base de Dados</p>
+          <p>6.1. Não é permitido o uso de dispositivos, software ou recursos que interfiram nas atividades da URBANSOLE, incluindo a publicação de ofertas, produtos ou serviços. Qualquer violação ou tentativa de violação resultará em medidas legais e sanções.</p>
+      
+          <p>7. Sanções</p>
+          <p>7.1. A URBANSOLE poderá advertir, banir temporariamente ou permanentemente a conta de um cliente, bem como iniciar medidas legais, caso ocorra:</p>
+          <p>a) Não cumprimento deste Termo de Uso;</p>
+          <p>b) Descumprimento de deveres perante a loja;</p>
+          <p>c) Prática de atos fraudulentos ou dolosos;</p>
+          <p>d) Não verificação da identidade do cliente ou fornecimento de informações incorretas.</p>
+      
+          <p>8. Cancelamento e Reembolso</p>
+          <p>8.1. A URBANSOLE aceitará o cancelamento e efetuará o reembolso se o cliente solicitar dentro de 7 (sete) dias após a compra, desde que não tenha utilizado os produtos adquiridos durante esse período.</p>      
+        </div>
+      </div>
+      <div class="flex p-4">
+        <button class="ms-auto py-2 px-3 rounded font-semibold" style="background-color:#5c0130; color:#ff0084;"
+          onclick="closeModal()">Fechar</button>
+      </div>
+    </div>
+  </div>
+  <a href="https://wa.me/message/" target="_blank" class="wpp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"
+    integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg=="
+    data-cf-beacon="{&quot;rayId&quot;:&quot;810d9b512f4a1d48&quot;,&quot;version&quot;:&quot;2023.8.0&quot;,&quot;r&quot;:1,&quot;b&quot;:1,&quot;token&quot;:&quot;8080ff681b484ba38ec64f4cc9449243&quot;,&quot;si&quot;:100}"
+    crossorigin="anonymous"></script>
+</body>
+<script type="text/javascript">
+  const dist_url = ''
+</script>
+<script src="public/assets/js/CentralCart.js"></script>
+<script src="assets/scripts.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="../scrollreveal.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+  !function (f, b, e, v, n, t, s) {
+    if (f.fbq) return; n = f.fbq = function () {
+      n.callMethod ?
+      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    };
+    if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+    n.queue = []; t = b.createElement(e); t.async = !0;
+    t.src = v; s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s)
+  }(window, document, 'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '771543471055873');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=771543471055873&ev=PageView&noscript=1" /></noscript>
+
+
+<script>
+  !function (f, b, e, v, n, t, s) {
+    if (f.fbq) return; n = f.fbq = function () {
+      n.callMethod ?
+      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    };
+    if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+    n.queue = []; t = b.createElement(e); t.async = !0;
+    t.src = v; s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s)
+  }(window, document, 'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '771543471055873');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" src="https://www.facebook.com/tr?id=771543471055873&ev=PageView
+  &noscript=1" />
+</noscript>
+<script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) {
+      for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++
+      )ttq.setAndDefer(e, ttq.methods[n]); return e
+    }, ttq.load = function (e, n) { var i = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; n = document.createElement("script"); n.type = "text/javascript", n.async = !0, n.src = i + "?sdkid=" + e + "&lib=" + t; e = document.getElementsByTagName("script")[0]; e.parentNode.insertBefore(n, e) };
+
+    ttq.load('CG9M90US77UA9DC1PTQ0');
+    ttq.page();
+  }(window, document, 'ttq');
+</script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WM3HVPX7" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NEMR6V02B%22%3E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NEMR6V02B');
+</script>
+
+</html>
